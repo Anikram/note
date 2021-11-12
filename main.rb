@@ -21,12 +21,12 @@ choices = Note.note_types
 
 choice = -1
 
-until choice.integer? && choice >= 0 && choice < choices.size
+until choice >= 0 && choice < choices.size
   choices.each_with_index do |type, index|
     puts "#{index}. #{type}"
   end
 
-  choice = STDIN.gets.chomp.to_i
+  choice = gets.to_i
 end
 
 entry = Note.create(choice)
