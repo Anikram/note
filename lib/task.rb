@@ -1,6 +1,7 @@
 require_relative 'note'
+require 'date'
 
-class Task
+class Task < Note
   def initialize
     super
     @due_date = Time.now

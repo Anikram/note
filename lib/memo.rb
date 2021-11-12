@@ -1,9 +1,9 @@
-class Memo < Post
+class Memo < Note
 
   def read_from_console
     puts "Enter text. End with ':wq'"
     @text = []
-
+    line = ''
     while line != ":wq" do
       line = STDIN.gets.chomp
       @text << line
